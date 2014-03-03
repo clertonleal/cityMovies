@@ -1,0 +1,26 @@
+<%= form_for(@cinema_movie) do |f| %>
+  <% if @cinema_movie.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cinema_movie.errors.count, "error") %> prohibited this cinema_movie from being saved:</h2>
+
+      <ul>
+      <% @cinema_movie.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <div class="field">
+      <%= f.label :cinema_id %>
+      <br>
+      <%= f.collection_select(:cinema_id, Cinema.all, :id, :name) %>
+    </div>
+    <div class="field">
+      <%= f.label :movie_id %>
+      <br>
+      <%= f.collection_select(:movie_id, Movie.all, :id, :title) %>
+    </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

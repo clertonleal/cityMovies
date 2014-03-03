@@ -1,4 +1,18 @@
 Citymovies::Application.routes.draw do
+  resources :cinema_movies
+
+  resources :actors
+
+  resources :videos
+
+  resources :photos
+
+  resources :movies
+
+  resources :cinemas
+
+  resources :addresses
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

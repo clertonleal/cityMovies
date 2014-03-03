@@ -1,0 +1,47 @@
+<h1>Listing cinemas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Opentime</th>
+      <th>Closetime</th>
+      <th>Sunday</th>
+      <th>Monday</th>
+      <th>Tuesday</th>
+      <th>Wednesday</th>
+      <th>Thursday</th>
+      <th>Friday</th>
+      <th>Saturday</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cinemas.each do |cinema| %>
+      <tr>
+        <td><%= cinema.name %></td>
+        <td><%= cinema.address.street %></td>
+        <td><%= cinema.openTime %></td>
+        <td><%= cinema.closeTime %></td>
+        <td><%= cinema.sunday %></td>
+        <td><%= cinema.monday %></td>
+        <td><%= cinema.tuesday %></td>
+        <td><%= cinema.wednesday %></td>
+        <td><%= cinema.thursday %></td>
+        <td><%= cinema.friday %></td>
+        <td><%= cinema.saturday %></td>
+        <td><%= link_to 'Show', cinema %></td>
+        <td><%= link_to 'Edit', edit_cinema_path(cinema) %></td>
+        <td><%= link_to 'Destroy', cinema, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cinema', new_cinema_path %>

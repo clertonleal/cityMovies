@@ -1,0 +1,58 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cinema.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @cinema.address.street %>
+</p>
+
+<p>
+  <strong>Opentime:</strong>
+  <%= @cinema.openTime %>
+</p>
+
+<p>
+  <strong>Closetime:</strong>
+  <%= @cinema.closeTime %>
+</p>
+
+<p>
+  <strong>Sunday:</strong>
+  <%= @cinema.sunday %>
+</p>
+
+<p>
+  <strong>Monday:</strong>
+  <%= @cinema.monday %>
+</p>
+
+<p>
+  <strong>Tuesday:</strong>
+  <%= @cinema.tuesday %>
+</p>
+
+<p>
+  <strong>Wednesday:</strong>
+  <%= @cinema.wednesday %>
+</p>
+
+<p>
+  <strong>Thursday:</strong>
+  <%= @cinema.thursday %>
+</p>
+
+<p>
+  <strong>Friday:</strong>
+  <%= @cinema.friday %>
+</p>
+
+<p>
+  <strong>Saturday:</strong>
+</p>
+
+<%= link_to 'Edit', edit_cinema_path(@cinema) %> |
+<%= link_to 'Back', cinemas_path %>

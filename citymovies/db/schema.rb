@@ -11,16 +11,58 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140214232826) do
+ActiveRecord::Schema.define(version: 20140303184458) do
+
+  create_table "actors", force: true do |t|
+    t.integer  "movie_id"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "addresses", force: true do |t|
+    t.string   "street"
+    t.integer  "number"
+    t.string   "city"
+    t.string   "country"
+    t.string   "state"
+    t.string   "cep"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "cinema_movies", force: true do |t|
+    t.integer  "cinema_id"
+    t.integer  "movie_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+# Could not dump table "cinemas" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "movies", force: true do |t|
     t.string   "title"
-    t.string   "synopsis"
-    t.decimal  "age"
+    t.text     "synopsis"
+    t.integer  "age"
     t.string   "cover"
-    t.decimal  "durationInMinutes"
+    t.integer  "duration_in_minutes"
     t.string   "director"
     t.string   "gender"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "photos", force: true do |t|
+    t.integer  "movie_id"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "videos", force: true do |t|
+    t.integer  "movie_id"
+    t.string   "video_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

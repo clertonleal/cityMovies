@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: 
+  synopsis: 
+  age: 
+  cover: 
+  duration_in_minutes: 
+  director: 
+  gender: MyString
+
+two:
+  title: 
+  synopsis: 
+  age: 
+  cover: 
+  duration_in_minutes: 
+  director: 
+  gender: MyString
