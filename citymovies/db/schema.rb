@@ -38,8 +38,23 @@ ActiveRecord::Schema.define(version: 20140303184458) do
     t.datetime "updated_at"
   end
 
-# Could not dump table "cinemas" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "cinemas", force: true do |t|
+    t.string   "name"
+    t.integer  "address_id"
+    t.date     "openTime"
+    t.date     "closeTime"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.float    "sunday"
+    t.float    "monday"
+    t.float    "tuesday"
+    t.float    "wednesday"
+    t.float    "thursday"
+    t.float    "friday"
+    t.float    "saturday"
+  end
+
+  add_index "cinemas", ["address_id"], name: "index_cinemas_on_address_id"
 
   create_table "movies", force: true do |t|
     t.string   "title"
