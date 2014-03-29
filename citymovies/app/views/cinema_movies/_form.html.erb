@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-    <div class="field">
+    <div class="field" id="vai">
       <%= f.label :cinema_id %>
       <br>
       <%= f.collection_select(:cinema_id, Cinema.all, :id, :name) %>

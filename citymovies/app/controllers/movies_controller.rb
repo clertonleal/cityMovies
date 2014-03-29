@@ -7,6 +7,11 @@ class MoviesController < ApplicationController
     @movies = Movie.all
   end
 
+  # GET /movies#home
+  def home
+    @movies = Movie.all
+  end
+
   # GET /movies/1
   # GET /movies/1.json
   def show

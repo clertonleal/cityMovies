@@ -1,0 +1,20 @@
+<h1>Listing movies</h1>
+<table>
+
+
+  <tbody>
+  <% @movies.each do |movie| %>
+      <tr>
+        <td><%= link_to image_tag(movie.cover), url_for(controller: 'movies', action: 'show', id: movie) %></td>
+        <td>
+        <div><%= movie.title %></div>
+        <div><%= movie.synopsis %></div>
+        <div><%= movie.age %></div>
+        <div><%= movie.duration_in_minutes %></div>
+        <div><%= movie.director %></div>
+        <div><%= movie.gender %></div>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
