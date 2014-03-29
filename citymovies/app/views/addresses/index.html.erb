@@ -1,26 +1,29 @@
 <div id="pageAddresses" class="addressesContent">
 
-<h1>Listing addresses</h1>
+<div class="breadcrumb">
+  <span>Lista de Endereços</span>
+  <span class="btnAdd"><%= link_to 'New Address', new_address_path %></span>
+</div>
 
 <table>
   <thead>
     <tr>
-      <th>Street</th>
-      <th>Number</th>
-      <th>City</th>
-      <th>Country</th>
-      <th>State</th>
-      <th>Cep</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th width="30%" style="padding-left: 30px">Rua</th>
+      <th width="12%">Número</th>
+      <th width="12%">Cidade</th>
+      <th width="12%">País</th>
+      <th width="12%" >Estado</th>
+      <th width="12%">Cep</th>
+      <th width="3%"></th>
+      <th width="3%"></th>
+      <th width="3%" style="padding-right: 30px"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @addresses.each do |address| %>
       <tr>
-        <td><%= address.street %></td>
+        <td style="padding-left: 30px"><%= address.street %></td>
         <td><%= address.number %></td>
         <td><%= address.city %></td>
         <td><%= address.country %></td>
@@ -28,7 +31,7 @@
         <td><%= address.cep %></td>
         <td><%= link_to 'Show', address %></td>
         <td><%= link_to 'Edit', edit_address_path(address) %></td>
-        <td><%= link_to 'Destroy', address, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td style="padding-right: 30px"><%= link_to 'Destroy', address, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,7 +39,7 @@
 
 <br>
 
-<%= link_to 'New Address', new_address_path %>
+
 
 </div>
 
