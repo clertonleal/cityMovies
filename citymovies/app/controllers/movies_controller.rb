@@ -7,7 +7,7 @@ class MoviesController < ApplicationController
     @movies = Movie.all
   end
 
-  # GET /movies#home
+  # GET /
   def home
     @movies = Movie.all
   end
