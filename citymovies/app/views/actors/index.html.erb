@@ -14,7 +14,9 @@
   <tbody>
     <% @actors.each do |actor| %>
       <tr>
-        <td><%= actor.movie.title %></td>
+        <% unless actor.movie.nil? %>
+            <td><%= actor.movie.title %></td>
+        <% end %>
         <td><%= actor.name %></td>
         <td><%= link_to 'Show', actor %></td>
         <td><%= link_to 'Edit', edit_actor_path(actor) %></td>

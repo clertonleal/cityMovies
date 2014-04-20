@@ -22,7 +22,7 @@
         <td><%= movie.title %></td>
         <td><%= movie.synopsis %></td>
         <td><%= movie.age %></td>
-        <td><%= movie.cover %></td>
+        <td><%= image_tag movie.cover.url(:thumb) %></td>
         <td><%= movie.duration_in_minutes %></td>
         <td><%= movie.director %></td>
         <td><%= movie.gender %></td>

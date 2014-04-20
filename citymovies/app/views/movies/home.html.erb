@@ -3,18 +3,13 @@
 
 
   <tbody>
+  <div class="row">
   <% @movies.each do |movie| %>
-      <tr>
-        <td><%= link_to image_tag(movie.cover), url_for(controller: 'movies', action: 'show', id: movie) %></td>
-        <td>
-        <div><%= movie.title %></div>
-        <div><%= movie.synopsis %></div>
-        <div><%= movie.age %></div>
-        <div><%= movie.duration_in_minutes %></div>
-        <div><%= movie.director %></div>
-        <div><%= movie.gender %></div>
-        </td>
-      </tr>
+            <div class="col-md-6">
+                <div><%= link_to image_tag(movie.cover.url(:medium)), url_for(controller: 'movies', action: 'show', id: movie) %></div>
+                <h4><%= movie.title %></h4>
+            </div>
   <% end %>
+  </div>
   </tbody>
 </table>
