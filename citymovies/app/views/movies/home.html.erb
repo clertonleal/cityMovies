@@ -1,10 +1,14 @@
-<h1>Listing movies</h1>
+<div class="breadcrumb">
+  <span style="color: #C60200; font-size: 30px">Filmes em cartaz no cinema</span>
+</div>
+
 <table>
   <tbody>
   <div class="row">
   <% @movies.each do |movie| %>
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <div><%= link_to image_tag(movie.cover.url(:medium)), url_for(controller: 'movies', action: 'show', id: movie) %></div>
+
                 <h4><%= movie.title %></h4>
             </div>
   <% end %>

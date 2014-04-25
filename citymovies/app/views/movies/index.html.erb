@@ -1,6 +1,10 @@
-<h1>Listing movies</h1>
+<div class="breadcrumb">
+  <span style="font-weight: bolder">Listas de Filmes</span>
+  <span class="btnAdd"><%= link_to 'New Movie', new_movie_path %></span>
+</div>
+
 <%= link_to 'Voltar', action: 'index' %>
-<table>
+<table width="100%">
   <thead>
     <tr>
       <th>Title</th>
@@ -37,4 +41,4 @@
 
 <br>
 
-<%= link_to 'New Movie', new_movie_path %>
+
