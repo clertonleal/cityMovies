@@ -72,6 +72,6 @@ class CinemasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cinema_params
-      params.require(:cinema).permit(:name, :address_id, :openTime, :closeTime, :sunday, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday)
+      params.require(:cinema).permit(:name, :address_id, :openTime, :closeTime, :sunday, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :holiday_price)
     end
 end

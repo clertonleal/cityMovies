@@ -3,8 +3,8 @@ class CreateCinemas < ActiveRecord::Migration
     create_table :cinemas do |t|
       t.string :name
       t.references :address, index: true
-      t.date :openTime
-      t.date :closeTime
+      t.datetime :openTime
+      t.datetime :closeTime
 
       t.timestamps
     end

@@ -16,8 +16,11 @@
 /tmp
 
 # Intellij
-.idea/
-*.iml
-*.iws
+# .idea/
+# *.iml
+# *.iws
+#
+# # Mac
+# .DS_Store
 
 public/system

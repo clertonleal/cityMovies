@@ -12,6 +12,7 @@
 
   <br>
 
+
   <p>
     <strong>Synopsis:</strong>
     <br>
@@ -41,6 +42,17 @@
     <br>
     <%= @movie.gender %>
   </p>
+  <div>
+    <% @movie.cinemas.each do |cinema| %>
+
+        <span style="font-size: 16px"><%= cinema.name %></span>
+        <br />
+        <span>Inteira: <%=number_to_currency(cinema.sunday, :unit => 'R$') %> - </span>
+        <span>Meia: <%=number_to_currency(cinema.sunday/2, :unit => 'R$') %></span>
+        <br /><br />
+
+    <% end %>
+  </div>
 
 </div>
 

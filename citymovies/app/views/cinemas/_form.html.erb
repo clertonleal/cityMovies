@@ -24,47 +24,52 @@
     <div class="field">
       <%= f.label :openTime %>
       <br>
-      <%= f.date_select :openTime %>
+      <%= f.datetime_select :openTime %>
     </div>
     <div class="field">
       <%= f.label :closeTime %>
       <br>
-      <%= f.date_select :closeTime %>
+      <%= f.datetime_select :closeTime %>
     </div>
     <div class="field">
       <%= f.label :sunday %>
       <br>
-      <%= f.number_field :sunday %>
+      <%= f.text_field :sunday, data: { role: 'money', a_sep: '.', a_dec: ',' } %>
     </div>
     <div class="field">
       <%= f.label :monday %>
       <br>
-      <%= f.number_field :monday %>
+      <%= f.text_field :monday, data: { role: 'money', a_sep: '.', a_dec: ',' } %>
     </div>
     <div class="field">
       <%= f.label :tuesday %>
       <br>
-      <%= f.number_field :tuesday %>
+      <%= f.text_field :tuesday, data: { role: 'money', a_sep: '.', a_dec: ',' } %>
     </div>
     <div class="field">
       <%= f.label :wednesday %>
       <br>
-      <%= f.number_field :wednesday %>
+      <%= f.text_field :wednesday, data: { role: 'money', a_sep: '.', a_dec: ',' } %>
     </div>
     <div class="field">
       <%= f.label :thursday %>
       <br>
-      <%= f.number_field :thursday %>
+      <%= f.text_field :thursday, data: { role: 'money', a_sep: '.', a_dec: ',' } %>
     </div>
     <div class="field">
       <%= f.label :friday %>
       <br>
-      <%= f.number_field :friday %>
+      <%= f.text_field :friday, data: { role: 'money', a_sep: '.', a_dec: ',' } %>
     </div>
     <div class="field">
       <%= f.label :saturday %>
       <br>
-      <%= f.number_field :saturday %>
+      <%= f.text_field :saturday, data: { role: 'money', a_sep: '.', a_dec: ',' } %>
+    </div>
+    <div class="field">
+      <%= f.label :holiday_price %>
+      <br>
+      <%= f.text_field :holiday_price, data: { role: 'money', a_sep: '.', a_dec: ',' } %>
     </div>
     <div class="actions">
       <%= f.submit %>

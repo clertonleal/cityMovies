@@ -17,6 +17,7 @@
       <th>Thursday</th>
       <th>Friday</th>
       <th>Saturday</th>
+      <th>Holiday</th>
       <th></th>
       <th></th>
       <th></th>
@@ -37,6 +38,7 @@
         <td><%= cinema.thursday %></td>
         <td><%= cinema.friday %></td>
         <td><%= cinema.saturday %></td>
+        <td><%= cinema.holiday_price %></td>
         <td><%= link_to 'Show', cinema %></td>
         <td><%= link_to 'Edit', edit_cinema_path(cinema) %></td>
         <td><%= link_to 'Destroy', cinema, method: :delete, data: { confirm: 'Are you sure?' } %></td>

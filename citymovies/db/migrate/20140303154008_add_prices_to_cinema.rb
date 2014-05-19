@@ -1,12 +1,12 @@
 class AddPricesToCinema < ActiveRecord::Migration
   def up
-    add_column :cinemas, :sunday, :float
-    add_column :cinemas, :monday, :float
-    add_column :cinemas, :tuesday, :float
-    add_column :cinemas, :wednesday, :float
-    add_column :cinemas, :thursday, :float
-    add_column :cinemas, :friday, :float
-    add_column :cinemas, :saturday, :float
+    add_column :cinemas, :sunday, :decimal
+    add_column :cinemas, :monday, :decimal
+    add_column :cinemas, :tuesday, :decimal
+    add_column :cinemas, :wednesday, :decimal
+    add_column :cinemas, :thursday, :decimal
+    add_column :cinemas, :friday, :decimal
+    add_column :cinemas, :saturday, :decimal
   end
 
   def down
