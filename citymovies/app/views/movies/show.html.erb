@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<div style="float: left">
+<div style="float: left; margin-right: 50px">
   <%= image_tag @movie.cover.url(:medium) %>
 </div>
 
-<div style="float: left; padding-left: 30px">
+<div style="float: left; width: 700px">
 
-  <p style="font-size: 22px; color: #C60200">
+  <p style="font-size: 25px; color: #C60200; font-weight: 100">
   <%= @movie.title %>
   </p>
 
@@ -42,15 +42,51 @@
     <br>
     <%= @movie.gender %>
   </p>
+
+  <div class="field">
+      <%= select_tag "cinemasDropDown", options_from_collection_for_select(@movie.cinemas, "name", "name") %>
+  </div>
+
   <div>
     <% @movie.cinemas.each do |cinema| %>
-
         <span style="font-size: 16px"><%= cinema.name %></span>
         <br />
-        <span>Inteira: <%=number_to_currency(cinema.sunday, :unit => 'R$') %> - </span>
-        <span>Meia: <%=number_to_currency(cinema.sunday/2, :unit => 'R$') %></span>
-        <br /><br />
 
+        <table class="table table-condensed">
+
+          <tr class="success">
+            <td>Dom</td>
+            <td>Seg</td>
+            <td>Ter</td>
+            <td>Qua</td>
+            <td>Qui</td>
+            <td>Sex</td>
+            <td>Sab</td>
+          </tr>
+
+          <tr class="active">
+            <td><span>Inteira: <%=number_to_currency(cinema.sunday, :unit => 'R$') %></span></td>
+            <td><span>Inteira: <%=number_to_currency(cinema.monday, :unit => 'R$') %></span></td>
+            <td><span>Inteira: <%=number_to_currency(cinema.tuesday, :unit => 'R$') %></span></td>
+            <td><span>Inteira: <%=number_to_currency(cinema.wednesday, :unit => 'R$') %></span></td>
+            <td><span>Inteira: <%=number_to_currency(cinema.thursday, :unit => 'R$') %></span></td>
+            <td><span>Inteira: <%=number_to_currency(cinema.friday, :unit => 'R$') %></span></td>
+            <td><span>Inteira: <%=number_to_currency(cinema.saturday, :unit => 'R$') %></span></td>
+          </tr>
+
+          <tr class="active">
+            <td><span>Meia: <%=number_to_currency(cinema.sunday/2, :unit => 'R$') %></span></td>
+            <td><span>Meia: <%=number_to_currency(cinema.monday/2, :unit => 'R$') %></span></td>
+            <td><span>Meia: <%=number_to_currency(cinema.tuesday/2, :unit => 'R$') %></span></td>
+            <td><span>Meia: <%=number_to_currency(cinema.wednesday/2, :unit => 'R$') %></span></td>
+            <td><span>Meia: <%=number_to_currency(cinema.thursday/2, :unit => 'R$') %></span></td>
+            <td><span>Meia: <%=number_to_currency(cinema.friday/2, :unit => 'R$') %></span></td>
+            <td><span>Meia: <%=number_to_currency(cinema.saturday/2, :unit => 'R$') %></span></td>
+          </tr>
+
+        </table>
+
+       
     <% end %>
   </div>
 
