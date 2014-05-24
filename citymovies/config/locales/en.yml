@@ -21,3 +21,13 @@
 
 en:
   hello: "Hello world"
+  actors_list: "Actors List"
+
+  movie_title: "Movie"
+  name_title: "Name"
+  new_actor: "New Actor"
+  button:
+    show: "Show"
+    edit: "Edit"
+    destroy: "Destroy"
+  are_you_sure: "Are you sure?"

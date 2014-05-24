@@ -1,13 +1,13 @@
 <div class="breadcrumb">
-  <span style="font-weight: bolder">Lista de Atores</span>
-  <span class="btnAdd"><%= link_to 'New Actor', new_actor_path %></span>
+  <span style="font-weight: bolder"><%= t 'actors_list' %></span>
+  <span class="btnAdd"><%= link_to I18n.t('new_actor'), new_actor_path %></span>
 </div>
 
 <table width="100%">
   <thead>
     <tr>
-      <th>Movie</th>
-      <th>Name</th>
+      <th><%= t 'movie_title' %></th>
+      <th><%= t 'name_title' %></th>
       <th></th>
       <th></th>
       <th></th>
@@ -21,9 +21,9 @@
             <td><%= actor.movie.title %></td>
         <% end %>
         <td><%= actor.name %></td>
-        <td><%= link_to 'Show', actor %></td>
-        <td><%= link_to 'Edit', edit_actor_path(actor) %></td>
-        <td><%= link_to 'Destroy', actor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to I18n.t('button.show'), actor %></td>
+        <td><%= link_to I18n.t('button.edit'), edit_actor_path(actor) %></td>
+        <td><%= link_to I18n.t('button.destroy'), actor, method: :delete, data: { confirm: I18n.t('are_you_sure') } %></td>
       </tr>
     <% end %>
   </tbody>

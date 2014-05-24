@@ -1,4 +1,8 @@
 Citymovies::Application.routes.draw do
+  resources :movie_hours
+
+  resources :rooms
+
   resources :cinema_movies
 
   resources :actors
