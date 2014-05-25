@@ -18,7 +18,7 @@ class CinemasControllerTest < ActionController::TestCase
 
   test "should create cinema" do
     assert_difference('Cinema.count') do
-      post :create, cinema: { address_id: @cinema.address_id, closeTime: @cinema.closeTime, name: @cinema.name, openTime: @cinema.openTime }
+      post :create, cinema: { address_id: @cinema.address_id, closeTime: @cinema.closeTime, name: @cinema.name, openTime: @cinema.openTime, sunday: @cinema.sunday, monday: @cinema.monday, tuesday: @cinema.tuesday, wednesday: @cinema.wednesday, thursday: @cinema.thursday, friday: @cinema.friday, saturday: @cinema.saturday, holiday_price: @cinema.holiday_price }
     end
 
     assert_redirected_to cinema_path(assigns(:cinema))

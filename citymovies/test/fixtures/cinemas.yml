@@ -1,13 +1,31 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   name: MyString
-  address_id: 
+  address_id: 1
   openTime: 2014-02-21
   closeTime: 2014-02-21
+  sunday: 1
+  monday: 1
+  tuesday: 1
+  wednesday: 1
+  thursday: 1
+  friday: 1
+  saturday: 1
+  holiday_price: 1
 
 two:
+  id: 2
   name: MyString
-  address_id: 
+  address_id: 2
   openTime: 2014-02-21
   closeTime: 2014-02-21
+  sunday: 1
+  monday: 1
+  tuesday: 1
+  wednesday: 1
+  thursday: 1
+  friday: 1
+  saturday: 1
+  holiday_price: 1

@@ -2,8 +2,14 @@
 
 one:
   movie_id: 
-  image_url: MyString
+  image_url_file_name: MyString
+  image_url_content_type:
+  image_url_file_size:
+  image_url_updated_at:
 
 two:
   movie_id: 
-  image_url: MyString
+  image_url_file_name: MyString
+  image_url_content_type:
+  image_url_file_size:
+  image_url_updated_at:

@@ -1,19 +1,27 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: 
+  id: 1
+  title: coisa
   synopsis: 
   age: 
-  cover: 
+  cover_file_name: MyString.png
+  cover_content_type: MyString
+  cover_file_size:
+  cover_updated_at:
   duration_in_minutes: 
   director: 
   gender: MyString
 
 two:
-  title: 
+  id: 2
+  title: ui
   synopsis: 
   age: 
-  cover: 
+  cover_file_name: MyString.png
+  cover_content_type:
+  cover_file_size:
+  cover_updated_at:
   duration_in_minutes: 
   director: 
   gender: MyString
