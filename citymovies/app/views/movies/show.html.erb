@@ -83,13 +83,28 @@
             <td><span>Meia: <%=number_to_currency(cinema.friday/2, :unit => 'R$') %></span></td>
             <td><span>Meia: <%=number_to_currency(cinema.saturday/2, :unit => 'R$') %></span></td>
           </tr>
-
         </table>
+
+        <div>
+          <% cinema.rooms.each do |room| %>
+              <% hours = Hour.where(movie_id: @movie.id, room_id: room.id).all%>
+              <% unless hours.empty? %>
+                  <span style="font-size: 16px"><%= room.name %></span>
+                  <br />
+                  <table class="table table-condensed">
+                    <tr class="active">
+                      <% hours.each do |hour| %>
+                          <td><span><%= hour.hour %></span></td>
+                      <% end %>
+                    </tr>
+                  </table>
+              <% end %>
+          <% end %>
+        </div>
 
        
     <% end %>
   </div>
-
 </div>
 
 
