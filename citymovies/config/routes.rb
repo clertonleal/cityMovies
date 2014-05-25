@@ -1,5 +1,5 @@
 Citymovies::Application.routes.draw do
-  resources :movie_hours
+  resources :hours
 
   resources :rooms
 

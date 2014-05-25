@@ -43,9 +43,9 @@
     <%= @movie.gender %>
   </p>
 
-  <div class="field">
-      <%= select_tag "cinemasDropDown", options_from_collection_for_select(@movie.cinemas, "name", "name") %>
-  </div>
+  <!--<div class="field">-->
+      <!--<%= select_tag "cinemasDropDown", options_from_collection_for_select(@movie.cinemas, "name", "name") %>-->
+  <!--</div>-->
 
   <div>
     <% @movie.cinemas.each do |cinema| %>

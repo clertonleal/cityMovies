@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140524001737) do
+ActiveRecord::Schema.define(version: 20140525170657) do
 
   create_table "actors", force: true do |t|
     t.integer  "movie_id"
@@ -57,9 +57,10 @@ ActiveRecord::Schema.define(version: 20140524001737) do
 
   add_index "cinemas", ["address_id"], name: "index_cinemas_on_address_id"
 
-  create_table "movie_hours", force: true do |t|
-    t.datetime "hour"
+  create_table "hours", force: true do |t|
+    t.time     "hour"
     t.integer  "room_id"
+    t.integer  "movie_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

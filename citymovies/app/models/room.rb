@@ -1,4 +1,4 @@
 class Room < ActiveRecord::Base
-  has_many :movie_hours
+  has_many :hours
   belongs_to :cinema
 end

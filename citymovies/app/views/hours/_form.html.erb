@@ -1,10 +1,10 @@
-<%= form_for(@movie_hour) do |f| %>
-  <% if @movie_hour.errors.any? %>
+<%= form_for(@hour) do |f| %>
+  <% if @hour.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@movie_hour.errors.count, "error") %> prohibited this movie_hour from being saved:</h2>
+      <h2><%= pluralize(@hour.errors.count, "error") %> prohibited this hour from being saved:</h2>
 
       <ul>
-      <% @movie_hour.errors.full_messages.each do |msg| %>
+      <% @hour.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -13,11 +13,15 @@
 
   <div class="field">
     <%= f.label :hour %><br>
-    <%= f.datetime_select :hour %>
+    <%= f.time_select :hour %>
   </div>
   <div class="field">
     <%= f.label :room_id %><br>
     <%= f.collection_select(:room_id, Room.all, :id, :name) %>
+  </div>
+  <div class="field">
+    <%= f.label :movie_id %><br>
+    <%= f.collection_select(:movie_id, Movie.all, :id, :title) %>
   </div>
   <div class="actions">
     <%= f.submit %>

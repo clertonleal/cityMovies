@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Hour:</strong>
+  <%= @hour.hour %>
+</p>
+
+<p>
+  <strong>Room:</strong>
+  <%= @hour.room.name %>
+</p>
+
+<p>
+  <strong>Movie:</strong>
+  <%= @hour.movie.title %>
+</p>
+
+<%= link_to 'Edit', edit_hour_path(@hour) %> |
+<%= link_to 'Back', hours_path %>
