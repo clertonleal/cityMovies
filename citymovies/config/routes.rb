@@ -1,4 +1,6 @@
 Citymovies::Application.routes.draw do
+  devise_for :users
+
   resources :hours
 
   resources :rooms
@@ -17,7 +19,9 @@ Citymovies::Application.routes.draw do
 
   resources :addresses
 
-  get '/' => 'movies#home'
+  root to: 'home#home'
+
+  get 'home/:id' => 'home#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

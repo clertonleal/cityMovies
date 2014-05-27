@@ -43,71 +43,7 @@
     <%= @movie.gender %>
   </p>
 
-  <!--<div class="field">-->
-      <!--<%= select_tag "cinemasDropDown", options_from_collection_for_select(@movie.cinemas, "name", "name") %>-->
-  <!--</div>-->
-
-  <div>
-    <% @movie.cinemas.each do |cinema| %>
-        <span style="font-size: 16px"><%= cinema.name %></span>
-        <br />
-
-        <table class="table table-condensed">
-
-          <tr class="success">
-            <td>Dom</td>
-            <td>Seg</td>
-            <td>Ter</td>
-            <td>Qua</td>
-            <td>Qui</td>
-            <td>Sex</td>
-            <td>Sab</td>
-          </tr>
-
-          <tr class="active">
-            <td><span>Inteira: <%=number_to_currency(cinema.sunday, :unit => 'R$') %></span></td>
-            <td><span>Inteira: <%=number_to_currency(cinema.monday, :unit => 'R$') %></span></td>
-            <td><span>Inteira: <%=number_to_currency(cinema.tuesday, :unit => 'R$') %></span></td>
-            <td><span>Inteira: <%=number_to_currency(cinema.wednesday, :unit => 'R$') %></span></td>
-            <td><span>Inteira: <%=number_to_currency(cinema.thursday, :unit => 'R$') %></span></td>
-            <td><span>Inteira: <%=number_to_currency(cinema.friday, :unit => 'R$') %></span></td>
-            <td><span>Inteira: <%=number_to_currency(cinema.saturday, :unit => 'R$') %></span></td>
-          </tr>
-
-          <tr class="active">
-            <td><span>Meia: <%=number_to_currency(cinema.sunday/2, :unit => 'R$') %></span></td>
-            <td><span>Meia: <%=number_to_currency(cinema.monday/2, :unit => 'R$') %></span></td>
-            <td><span>Meia: <%=number_to_currency(cinema.tuesday/2, :unit => 'R$') %></span></td>
-            <td><span>Meia: <%=number_to_currency(cinema.wednesday/2, :unit => 'R$') %></span></td>
-            <td><span>Meia: <%=number_to_currency(cinema.thursday/2, :unit => 'R$') %></span></td>
-            <td><span>Meia: <%=number_to_currency(cinema.friday/2, :unit => 'R$') %></span></td>
-            <td><span>Meia: <%=number_to_currency(cinema.saturday/2, :unit => 'R$') %></span></td>
-          </tr>
-        </table>
-
-        <div>
-          <% cinema.rooms.each do |room| %>
-              <% hours = Hour.where(movie_id: @movie.id, room_id: room.id).all%>
-              <% unless hours.empty? %>
-                  <span style="font-size: 16px"><%= room.name %></span>
-                  <br />
-                  <table class="table table-condensed">
-                    <tr class="active">
-                      <% hours.each do |hour| %>
-                          <td><span><%= hour.hour %></span></td>
-                      <% end %>
-                    </tr>
-                  </table>
-              <% end %>
-          <% end %>
-        </div>
-
-       
-    <% end %>
-  </div>
+  <%= link_to 'Edit', edit_movie_path(@movie) %> |
+  <%= link_to 'Back', movies_path %>
 </div>
 
-
-
-  <!--<%= link_to 'Edit', edit_movie_path(@movie) %> |-->
-<!--<%= link_to 'Back', movies_path %>-->
