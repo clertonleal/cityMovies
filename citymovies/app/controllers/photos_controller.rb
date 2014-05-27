@@ -1,5 +1,6 @@
 class PhotosController < ApplicationController
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user! , only: [:show, :edit, :update, :destroy, :index]
 
   # GET /photos
   # GET /photos.json

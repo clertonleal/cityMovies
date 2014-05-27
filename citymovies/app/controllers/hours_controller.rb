@@ -1,5 +1,6 @@
 class HoursController < ApplicationController
   before_action :set_hour, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user! , only: [:show, :edit, :update, :destroy, :index]
 
   # GET /hours
   # GET /hours.json
