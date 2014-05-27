@@ -31,3 +31,12 @@ en:
     edit: "Edit"
     destroy: "Destroy"
   are_you_sure: "Are you sure?"
+  number:
+      currency:
+        format:
+          unit: "$"
+
+  time:
+      formats:
+        default: ! '%d de %B, %H:%M'
+        short: ! '%H:%M'

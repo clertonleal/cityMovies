@@ -15,7 +15,7 @@
   <tbody>
     <% @hours.each do |hour| %>
       <tr>
-        <td><%= hour.hour %></td>
+        <td><%= l(hour.hour, :format => :short) %></td>
         <td><%= hour.room.name %></td>
         <td><%= hour.movie.title %></td>
         <td><%= link_to 'Show', hour %></td>

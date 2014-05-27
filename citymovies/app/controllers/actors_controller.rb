@@ -1,6 +1,6 @@
 class ActorsController < ApplicationController
   before_action :set_actor, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user! , only: [:show, :edit, :update, :destroy, :index]
+  before_action :authenticate_user!
 
   # GET /actors
   # GET /actors.json

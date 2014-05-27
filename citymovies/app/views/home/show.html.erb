@@ -65,23 +65,23 @@
           </tr>
 
           <tr class="active">
-            <td><span>Inteira: <%=number_to_currency(cinema.sunday, :unit => 'R$') %></span></td>
-            <td><span>Inteira: <%=number_to_currency(cinema.monday, :unit => 'R$') %></span></td>
-            <td><span>Inteira: <%=number_to_currency(cinema.tuesday, :unit => 'R$') %></span></td>
-            <td><span>Inteira: <%=number_to_currency(cinema.wednesday, :unit => 'R$') %></span></td>
-            <td><span>Inteira: <%=number_to_currency(cinema.thursday, :unit => 'R$') %></span></td>
-            <td><span>Inteira: <%=number_to_currency(cinema.friday, :unit => 'R$') %></span></td>
-            <td><span>Inteira: <%=number_to_currency(cinema.saturday, :unit => 'R$') %></span></td>
+            <td><span>Inteira: <%=number_to_currency(cinema.sunday) %></span></td>
+            <td><span>Inteira: <%=number_to_currency(cinema.monday) %></span></td>
+            <td><span>Inteira: <%=number_to_currency(cinema.tuesday) %></span></td>
+            <td><span>Inteira: <%=number_to_currency(cinema.wednesday) %></span></td>
+            <td><span>Inteira: <%=number_to_currency(cinema.thursday) %></span></td>
+            <td><span>Inteira: <%=number_to_currency(cinema.friday) %></span></td>
+            <td><span>Inteira: <%=number_to_currency(cinema.saturday) %></span></td>
           </tr>
 
           <tr class="active">
-            <td><span>Meia: <%=number_to_currency(cinema.sunday/2, :unit => 'R$') %></span></td>
-            <td><span>Meia: <%=number_to_currency(cinema.monday/2, :unit => 'R$') %></span></td>
-            <td><span>Meia: <%=number_to_currency(cinema.tuesday/2, :unit => 'R$') %></span></td>
-            <td><span>Meia: <%=number_to_currency(cinema.wednesday/2, :unit => 'R$') %></span></td>
-            <td><span>Meia: <%=number_to_currency(cinema.thursday/2, :unit => 'R$') %></span></td>
-            <td><span>Meia: <%=number_to_currency(cinema.friday/2, :unit => 'R$') %></span></td>
-            <td><span>Meia: <%=number_to_currency(cinema.saturday/2, :unit => 'R$') %></span></td>
+            <td><span>Meia: <%=number_to_currency(cinema.sunday/2) %></span></td>
+            <td><span>Meia: <%=number_to_currency(cinema.monday/2) %></span></td>
+            <td><span>Meia: <%=number_to_currency(cinema.tuesday/2) %></span></td>
+            <td><span>Meia: <%=number_to_currency(cinema.wednesday/2) %></span></td>
+            <td><span>Meia: <%=number_to_currency(cinema.thursday/2) %></span></td>
+            <td><span>Meia: <%=number_to_currency(cinema.friday/2) %></span></td>
+            <td><span>Meia: <%=number_to_currency(cinema.saturday/2) %></span></td>
           </tr>
         </table>
 
@@ -94,7 +94,7 @@
                   <table class="table table-condensed">
                     <tr class="active">
                       <% hours.each do |hour| %>
-                          <td><span><%= hour.hour %></span></td>
+                          <td><span><%= I18n.l(hour.hour, :format => :short) %></span></td>
                       <% end %>
                     </tr>
                   </table>
