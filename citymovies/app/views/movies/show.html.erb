@@ -19,29 +19,31 @@
     <%= @movie.synopsis %>
   </p>
 
-  <p>
+  <div style="clear: both"><br /></div>
+
+  <div style="float: left">
     <strong>Age:</strong>
     <br>
     <%= @movie.age %>
-  </p>
+  </div>
 
-  <p>
+  <div style="float: left">
     <strong>Duration in minutes:</strong>
     <br>
     <%= @movie.duration_in_minutes %>
-  </p>
+  </div>
 
-  <p>
+  <div style="float: left">
     <strong>Director:</strong>
     <br>
     <%= @movie.director %>
-  </p>
+  </div>
 
-  <p>
+  <div style="float: left">
     <strong>Gender:</strong>
     <br>
     <%= @movie.gender %>
-  </p>
+  </div>
 
   <%= link_to 'Edit', edit_movie_path(@movie) %> |
   <%= link_to 'Back', movies_path %>

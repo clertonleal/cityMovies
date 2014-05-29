@@ -1,23 +1,23 @@
 <div class="breadcrumb">
-  <span style="font-weight: bolder">Lista de Cinemas</span>
-  <span class="btnAdd"><%= link_to 'New Cinema', new_cinema_path %></span>
+  <span style="font-weight: bolder"><%= t('list_cinemas') %></span>
+  <span class="btnAdd"><%= link_to t('new_cinema'), new_cinema_path %></span>
 </div>
 
 <table width="100%">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Address</th>
-      <th>Opentime</th>
-      <th>Closetime</th>
-      <th>Sunday</th>
-      <th>Monday</th>
-      <th>Tuesday</th>
-      <th>Wednesday</th>
-      <th>Thursday</th>
-      <th>Friday</th>
-      <th>Saturday</th>
-      <th>Holiday</th>
+      <th><%= t('name') %></th>
+      <th><%= t('address') %></th>
+      <th><%= t('opentime') %></th>
+      <th><%= t('closetime') %></th>
+      <th><%= t('sunday') %></th>
+      <th><%= t('monday') %></th>
+      <th><%= t('tuesday') %></th>
+      <th><%= t('wednesday') %></th>
+      <th><%= t('thursday') %></th>
+      <th><%= t('friday') %></th>
+      <th><%= t('saturday') %></th>
+      <th><%= t('holiday') %></th>
       <th></th>
       <th></th>
       <th></th>

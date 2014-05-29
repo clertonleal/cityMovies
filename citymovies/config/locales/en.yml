@@ -21,11 +21,13 @@
 
 en:
   hello: "Hello world"
-  actors_list: "Actors List"
+  
+
+
 
   movie_title: "Movie"
   name_title: "Name"
-  new_actor: "New Actor"
+  
   button:
     show: "Show"
     edit: "Edit"
@@ -40,3 +42,55 @@ en:
       formats:
         default: ! '%d de %B, %H:%M'
         short: ! '%H:%M'
+
+
+
+
+
+  name: "Nome"
+
+  add_cinema: "Criar Cinema"
+  list_cinemas: "Lista de Cinemas"
+  new_cinema: "Novo Cinema"
+
+  add_address: "Criar Endereço"
+  list_address: "Lista de Endereços"
+  new_address: "Novo Endereço"
+
+  actors_list: "Lista de Atores"
+  new_actor: "Novo Ator"
+  movie_title: "Filme"
+  new_actors: "Criar Ator"
+
+  street: "Rua"
+  number: "Número"
+  city: "Cidade"
+  country: "País"
+  state: "Estado"
+  cep: "CEP"
+
+
+  address: "Endereço"
+  opentime: "Abertura"
+  closetime: "Encerramento"
+
+
+  sunday: "Dom"
+  sunday_new: "Domingo"
+  monday: "Seg"
+  monday_new: "Segunda"
+  tuesday: "Ter"
+  tuesday_new: "terça"
+  wednesday: "Qua"
+  wednesday_new: "Quarta"
+  thursday: "Qui"
+  thursday_new: "Quinta"
+  friday: "Sex"
+  friday_new: "Sexta"
+  saturday: "Sab"
+  saturday_new: "Sábado"
+  holiday: "Feriados"
+
+  
+
+
