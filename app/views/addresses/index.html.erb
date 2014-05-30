@@ -1,19 +1,19 @@
 <div id="pageAddresses" class="addressesContent">
 
 <div class="breadcrumb">
-  <span style="font-weight: bolder">Lista de Endereços</span>
-  <span class="btnAdd"><%= link_to 'New Address', new_address_path %></span>
+  <span style="font-weight: bolder"><%= t('list_address') %></span>
+  <span class="btnAdd"><%= link_to t('new_address'), new_address_path %></span>
 </div>
 
 <table width="100%">
   <thead>
     <tr>
-      <th>Rua</th>
-      <th>Número</th>
-      <th>Cidade</th>
-      <th>País</th>
-      <th>Estado</th>
-      <th>Cep</th>
+      <th><%= t('street') %></th>
+      <th><%= t('number') %></th>
+      <th><%= t('city') %></th>
+      <th><%= t('country') %></th>
+      <th><%= t('state') %></th>
+      <th><%= t('cep') %></th>
       <th></th>
       <th></th>
       <th></th>

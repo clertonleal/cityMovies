@@ -12,62 +12,62 @@
     <% end %>
 
     <div class="field">
-      <%= f.label :name %>
+      <%= f.label t('name') %>
       <br>
       <%= f.text_field :name %>
     </div>
     <div class="field">
-      <%= f.label :address_id %>
+      <%= f.label t('address') %>
       <br>
       <%= f.collection_select(:address_id, Address.all, :id, :street) %>
     </div>
     <div class="field">
-      <%= f.label :openTime %>
+      <%= f.label t('opentime') %>
       <br>
       <%= f.datetime_select :openTime %>
     </div>
     <div class="field">
-      <%= f.label :closeTime %>
+      <%= f.label t('closetime') %>
       <br>
       <%= f.datetime_select :closeTime %>
     </div>
     <div class="field">
-      <%= f.label :sunday %>
+      <%= f.label t('sunday_new') %>
       <br>
       <%= f.text_field :sunday, data: { role: 'money', a_sep: '.', a_dec: ',' } %>
     </div>
     <div class="field">
-      <%= f.label :monday %>
+      <%= f.label t('monday_new') %>
       <br>
       <%= f.text_field :monday, data: { role: 'money', a_sep: '.', a_dec: ',' } %>
     </div>
     <div class="field">
-      <%= f.label :tuesday %>
+      <%= f.label t('tuesday_new') %>
       <br>
       <%= f.text_field :tuesday, data: { role: 'money', a_sep: '.', a_dec: ',' } %>
     </div>
     <div class="field">
-      <%= f.label :wednesday %>
+      <%= f.label t('wednesday_new') %>
       <br>
       <%= f.text_field :wednesday, data: { role: 'money', a_sep: '.', a_dec: ',' } %>
     </div>
     <div class="field">
-      <%= f.label :thursday %>
+      <%= f.label t('thursday_new') %>
       <br>
       <%= f.text_field :thursday, data: { role: 'money', a_sep: '.', a_dec: ',' } %>
     </div>
     <div class="field">
-      <%= f.label :friday %>
+      <%= f.label t('friday_new') %>
       <br>
       <%= f.text_field :friday, data: { role: 'money', a_sep: '.', a_dec: ',' } %>
     </div>
     <div class="field">
-      <%= f.label :saturday %>
+      <%= f.label t('saturday') %>
       <br>
       <%= f.text_field :saturday, data: { role: 'money', a_sep: '.', a_dec: ',' } %>
     </div>
     <div class="field">
-      <%= f.label :holiday_price %>
+      <%= f.label t('holiday') %>
       <br>
       <%= f.text_field :holiday_price, data: { role: 'money', a_sep: '.', a_dec: ',' } %>
     </div>

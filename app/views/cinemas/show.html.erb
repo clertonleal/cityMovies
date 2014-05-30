@@ -1,62 +1,62 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= t('name') %></strong>
   <%= @cinema.name %>
 </p>
 
 <p>
-  <strong>Address:</strong>
+  <strong><%= t('address') %></strong>
   <%= @cinema.address.street %>
 </p>
 
 <p>
-  <strong>Opentime:</strong>
+  <strong><%= t('opentime') %></strong>
   <%= @cinema.openTime %>
 </p>
 
 <p>
-  <strong>Closetime:</strong>
+  <strong><%= t('closetime') %></strong>
   <%= @cinema.closeTime %>
 </p>
 
 <p>
-  <strong>Sunday:</strong>
+  <strong><%= t('sunday') %></strong>
   <%= @cinema.sunday %>
 </p>
 
 <p>
-  <strong>Monday:</strong>
+  <strong><%= t('monday') %></strong>
   <%= @cinema.monday %>
 </p>
 
 <p>
-  <strong>Tuesday:</strong>
+  <strong><%= t('tuesday') %></strong>
   <%= @cinema.tuesday %>
 </p>
 
 <p>
-  <strong>Wednesday:</strong>
+  <strong><%= t('wednesday') %></strong>
   <%= @cinema.wednesday %>
 </p>
 
 <p>
-  <strong>Thursday:</strong>
+  <strong><%= t('thursday') %></strong>
   <%= @cinema.thursday %>
 </p>
 
 <p>
-  <strong>Friday:</strong>
+  <strong><%= t('friday') %></strong>
   <%= @cinema.friday %>
 </p>
 
 <p>
-  <strong>Saturday:</strong>
+  <strong><%= t('saturday') %></strong>
   <%= @cinema.saturday %>
 </p>
 
 <p>
-  <strong>Holiday:</strong>
+  <strong><%= t('holiday') %></strong>
   <%= @cinema.holiday_price %>
 </p>
 <%= link_to 'Edit', edit_cinema_path(@cinema) %> |
