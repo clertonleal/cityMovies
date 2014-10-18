@@ -11,10 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140525222929) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+ActiveRecord::Schema.define(version: 20141018224447) do
 
   create_table "actors", force: true do |t|
     t.integer  "movie_id"
@@ -58,7 +55,7 @@ ActiveRecord::Schema.define(version: 20140525222929) do
     t.decimal  "holiday_price"
   end
 
-  add_index "cinemas", ["address_id"], name: "index_cinemas_on_address_id", using: :btree
+  add_index "cinemas", ["address_id"], name: "index_cinemas_on_address_id"
 
   create_table "hours", force: true do |t|
     t.time     "hour"
@@ -71,8 +68,8 @@ ActiveRecord::Schema.define(version: 20140525222929) do
   create_table "movies", force: true do |t|
     t.string   "title"
     t.text     "synopsis"
-    t.integer  "age"
-    t.integer  "duration_in_minutes"
+    t.integer  "minimumAge"
+    t.integer  "durationInMinutes"
     t.string   "director"
     t.string   "gender"
     t.datetime "created_at"
@@ -115,8 +112,8 @@ ActiveRecord::Schema.define(version: 20140525222929) do
     t.datetime "updated_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
   create_table "videos", force: true do |t|
     t.integer  "movie_id"
