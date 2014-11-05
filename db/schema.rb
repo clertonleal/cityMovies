@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141018224447) do
+ActiveRecord::Schema.define(version: 20141104230656) do
 
   create_table "actors", force: true do |t|
     t.integer  "movie_id"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20141018224447) do
     t.decimal  "friday"
     t.decimal  "saturday"
     t.decimal  "holiday_price"
+    t.string   "key"
   end
 
   add_index "cinemas", ["address_id"], name: "index_cinemas_on_address_id"

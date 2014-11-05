@@ -1,6 +1,5 @@
 class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
 
   # GET /movies
   # GET /movies.json
@@ -11,6 +10,17 @@ class MoviesController < ApplicationController
   # GET /movies/1
   # GET /movies/1.json
   def show
+  end
+
+  # GET /movies/byCinema/{key}.json
+  def find_by_cinema_key
+    key = params[:key]
+    if key == 'all'
+      render :json => Movie.all
+    else
+      cinema = Cinema.find_by_key(params[:key])
+      render :json => cinema.movies
+    end
   end
 
   # GET /movies/new

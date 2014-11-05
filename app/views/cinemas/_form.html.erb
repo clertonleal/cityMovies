@@ -17,6 +17,11 @@
       <%= f.text_field :name %>
     </div>
     <div class="field">
+      <%= f.label t('key') %>
+      <br>
+      <%= f.text_field :key %>
+    </div>
+    <div class="field">
       <%= f.label t('address') %>
       <br>
       <%= f.collection_select(:address_id, Address.all, :id, :street) %>

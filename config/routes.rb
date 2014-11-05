@@ -23,6 +23,8 @@ Citymovies::Application.routes.draw do
 
   get 'home/:id' => 'home#show'
 
+  get 'movies/byCinema/:key' => 'movies#find_by_cinema_key'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

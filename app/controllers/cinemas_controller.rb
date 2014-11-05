@@ -1,6 +1,5 @@
 class CinemasController < ApplicationController
   before_action :set_cinema, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
 
   # GET /cinemas
   # GET /cinemas.json
@@ -73,6 +72,6 @@ class CinemasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cinema_params
-      params.require(:cinema).permit(:name, :address_id, :openTime, :closeTime, :sunday, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :holiday_price)
+      params.require(:cinema).permit(:name, :address_id, :openTime, :closeTime, :sunday, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :holiday_price, :key)
     end
 end
