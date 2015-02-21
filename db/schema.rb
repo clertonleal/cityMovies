@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141104230656) do
+ActiveRecord::Schema.define(version: 20141118131034) do
 
   create_table "actors", force: true do |t|
     t.integer  "movie_id"
@@ -79,6 +79,8 @@ ActiveRecord::Schema.define(version: 20141104230656) do
     t.string   "cover_content_type"
     t.integer  "cover_file_size"
     t.datetime "cover_updated_at"
+    t.string   "imdbLink"
+    t.string   "youtubeLink"
   end
 
   create_table "photos", force: true do |t|
