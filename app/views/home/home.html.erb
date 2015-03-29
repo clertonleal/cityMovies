@@ -7,7 +7,7 @@
   <div class="row">
   <% @movies.each do |movie| %>
             <div class="col-md-3">
-                <div><%= link_to image_tag(movie.cover.url(:medium)), url_for(controller: 'home', action: 'show', id: movie) %></div>
+                <div><%= link_to image_tag(movie.cover_url), url_for(controller: 'home', action: 'show', id: movie) %></div>
 
                 <h4><%= movie.title %></h4>
             </div>

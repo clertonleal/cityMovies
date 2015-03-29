@@ -18,7 +18,7 @@ class HoursControllerTest < ActionController::TestCase
 
   test "should create hour" do
     assert_difference('Hour.count') do
-      post :create, hour: { hour: @hour.hour, movie_id: @hour.movie_id, room_id: @hour.room_id }
+      post :create, hour: { hour: @hour.hour, movie_id: @hour.movie_id, cinema_id: @hour.cinema_id }
     end
 
     assert_redirected_to hour_path(assigns(:hour))
@@ -35,7 +35,7 @@ class HoursControllerTest < ActionController::TestCase
   end
 
   test "should update hour" do
-    patch :update, id: @hour, hour: { hour: @hour.hour, movie_id: @hour.movie_id, room_id: @hour.room_id }
+    patch :update, id: @hour, hour: { hour: @hour.hour, movie_id: @hour.movie_id, cinema_id: @hour.cinema_id }
     assert_redirected_to hour_path(assigns(:hour))
   end
 

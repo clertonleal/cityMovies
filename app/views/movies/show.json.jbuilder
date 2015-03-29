@@ -1,1 +1,7 @@
-json.extract! @movie, :id, :title, :synopsis, :minimumAge, :coverUrl, :durationInMinutes, :director, :gender, :created_at, :updated_at, :imdbLink, :youtubeLink
+json.extract! @movie, :id, :title, :synopsis, :cover_url,
+              :durationInMinutes, :director, :gender, :created_at, :updated_at
+
+
+
+
+

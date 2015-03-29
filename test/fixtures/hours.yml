@@ -2,10 +2,10 @@
 
 one:
   hour: 2014-05-25 14:06:57
-  room_id: 1
+  cinema_id: 1
   movie_id: 1
 
 two:
   hour: 2014-05-25 14:06:57
-  room_id: 2
+  cinema_id: 2
   movie_id: 2

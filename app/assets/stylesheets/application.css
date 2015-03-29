@@ -11,3 +11,7 @@
  *= require_self
  *= require_tree .
  */
+
+.col-md-3 {
+    height: 330px;
+}

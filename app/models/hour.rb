@@ -1,4 +1,4 @@
 class Hour < ActiveRecord::Base
   belongs_to :movie
-  belongs_to :room
+  belongs_to :cinema
 end

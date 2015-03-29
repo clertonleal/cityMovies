@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141118131034) do
+ActiveRecord::Schema.define(version: 20150228211311) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,10 +71,10 @@ ActiveRecord::Schema.define(version: 20141118131034) do
 
   create_table "hours", force: true do |t|
     t.time     "hour"
-    t.integer  "room_id"
     t.integer  "movie_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "cinema_id"
   end
 
   create_table "movies", force: true do |t|
@@ -86,12 +86,9 @@ ActiveRecord::Schema.define(version: 20141118131034) do
     t.string   "gender"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "cover_file_name"
-    t.string   "cover_content_type"
-    t.integer  "cover_file_size"
-    t.datetime "cover_updated_at"
     t.string   "imdbLink"
     t.string   "youtubeLink"
+    t.string   "cover_url"
   end
 
   create_table "photos", force: true do |t|

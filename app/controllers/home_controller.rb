@@ -2,7 +2,7 @@ class HomeController < ApplicationController
 
   # GET /
   def home
-    @movies = Movie.all
+    @movies = Movie.order :title
   end
 
   # GET /home/1
