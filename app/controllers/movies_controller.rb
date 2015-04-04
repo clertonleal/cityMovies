@@ -12,13 +12,13 @@ class MoviesController < ApplicationController
   def show
   end
 
-  # GET /movies/byCinema/{key}.json
-  def find_by_cinema_key
-    key = params[:key]
-    if key == 'all'
+  # GET /movies/byCinema/{id}.json
+  def find_by_cinema_id
+    cinema_id = params[:id]
+    if cinema_id == '-1'
       render :json => Movie.all
     else
-      cinema = Cinema.find_by_key(params[:key])
+      cinema = Cinema.find(cinema_id)
       render :json => cinema.movies
     end
   end

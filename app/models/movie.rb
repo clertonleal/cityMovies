@@ -5,6 +5,10 @@ class Movie < ActiveRecord::Base
   has_many :cinema_movies
   has_many :cinemas, through: :cinema_movies
 
+  def coverUrl
+    self.cover_url
+  end
+
   def as_json(options={})
     {
         id: self.id,
